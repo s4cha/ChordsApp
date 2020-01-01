@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         view.layout(
             |-40-field-40-|,
             40,
-            |keyboard|
+            |keyboard.height(340)|
         )
         
         field.becomeFirstResponder()
@@ -62,54 +62,92 @@ class ViewController: UIViewController {
 class Keyboard: UIView {
     
     let keyboardPortion = KeyboardPortion()
+    let keyboardPortion2 = KeyboardPortion()
+    let keyboardFrame = UIView()
+    let scrollView = UIScrollView()
     
     convenience init() {
         self.init(frame: .zero)
         
         sv(
-            keyboardPortion
+            scrollView.sv (
+                keyboardPortion,
+                keyboardPortion2
+            ),
+            keyboardFrame
         )
+    
+        |keyboardFrame.top(0).height(10)|
         
-        keyboardPortion.fillContainer()
+        |-20-keyboardPortion-(-1)-keyboardPortion2-20-|
+        keyboardPortion.fillVertically()
+        keyboardPortion2.fillVertically()
+        
+        
+        keyboardPortion.Height == Height - 10
+        keyboardPortion2.Height == Height - 10
+        
+        scrollView.fillContainer()
+        
+        keyboardFrame.backgroundColor = .black
     }
     
     func resetDisplay() {
         keyboardPortion.notes.forEach { $0.reset() }
+        keyboardPortion2.notes.forEach { $0.reset() }
     }
     
     func display(chord: Chord) {
         
+        // C chord: CEG -> KeyboardChord -> C3E3G3
+        // F chord: FAC -> KeyboardChord -> F3A3C4
+        
+        // Display notes in order (not a inversion)
+        // aka make sure notes are laid out from left to right.
+        var currentKeyboardPortion: KeyboardPortion = keyboardPortion
+        var previousNote: Note? = nil
+        
         chord.notes().forEach { note in
+            if let previousNote = previousNote {
+                let previouskbNoteType = keyboardNoteType(fromNote: previousNote)
+                let kbNoteType = keyboardNoteType(fromNote: note)
+                if let index = KeyboardNoteType.allCases.firstIndex(of: kbNoteType),
+                    let previousIndex = KeyboardNoteType.allCases.firstIndex(of: previouskbNoteType) {
+                    if index < previousIndex {
+                        currentKeyboardPortion = keyboardPortion2
+                    }
+                }
+            }
             
             switch note {
             case C:
-                keyboardPortion.C.show()
+                currentKeyboardPortion.C.show()
             case Csharp:
-                keyboardPortion.Csharp.show()
+                currentKeyboardPortion.Csharp.show()
             case D:
-                keyboardPortion.D.show()
+                currentKeyboardPortion.D.show()
             case Dsharp:
-                keyboardPortion.Dsharp.show()
+                currentKeyboardPortion.Dsharp.show()
             case E:
-                keyboardPortion.E.show()
+                currentKeyboardPortion.E.show()
             case F:
-                keyboardPortion.F.show()
+                currentKeyboardPortion.F.show()
             case Fsharp:
-                keyboardPortion.Fsharp.show()
+                currentKeyboardPortion.Fsharp.show()
             case G:
-                keyboardPortion.G.show()
+                currentKeyboardPortion.G.show()
             case Gsharp:
-                keyboardPortion.Gsharp.show()
+                currentKeyboardPortion.Gsharp.show()
             case A:
-                keyboardPortion.A.show()
+                currentKeyboardPortion.A.show()
             case Asharp:
-                keyboardPortion.Asharp.show()
+                currentKeyboardPortion.Asharp.show()
             case B:
-                keyboardPortion.B.show()
+                currentKeyboardPortion.B.show()
             default: ()
                 
             }
-            
+            previousNote = note
         }
     }
 }
