@@ -140,18 +140,21 @@ class WhiteKey: UIView, Key {
         layer.cornerRadius = 10
         overlay.backgroundColor = color
         overlay.layer.cornerRadius = 10
-        label.textColor = .black
+        label.textColor = .white
         
         overlay.isHidden = true
+        label.isHidden = true
         label.text = name
     }
     
     func show() {
         overlay.isHidden = false
+        label.isHidden = false
     }
     
     func reset() {
         overlay.isHidden = true
+        label.isHidden = true
     }
 }
 
@@ -179,15 +182,18 @@ class BlackKey: UIView, Key {
         label.textColor = .white
         
         overlay.isHidden = true
+        label.isHidden = true
         label.text = name
     }
     
     func show() {
         overlay.isHidden = false
+        label.isHidden = false
     }
     
     func reset() {
         overlay.isHidden = true
+        label.isHidden = true
     }
 }
 
