@@ -188,7 +188,7 @@ class WhiteKey: UIView, Key {
     let label = UILabel()
     let overlay = UIView()
     
-    convenience init(name: String, color: UIColor = .systemGreen) {
+    convenience init(name: String, color: UIColor = UIColor(named: "keyGreen")!) {
         self.init(frame: .zero)
         backgroundColor = .white
         
@@ -227,7 +227,7 @@ class BlackKey: UIView, Key {
     let label = UILabel()
     let overlay = UIView()
     
-    convenience init(name: String, color: UIColor = .systemGreen) {
+    convenience init(name: String, color: UIColor = UIColor(named: "keyGreen")!) {
         self.init(frame: .zero)
         backgroundColor = .black
         
