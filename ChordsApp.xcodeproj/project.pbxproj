@@ -10,9 +10,7 @@
 		9942E35D23BD28D00017EE38 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 9942E35C23BD28D00017EE38 /* Stevia */; };
 		9999A7A623B515E200284378 /* Chords in Frameworks */ = {isa = PBXBuildFile; productRef = 9999A7A523B515E200284378 /* Chords */; };
 		99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */; };
-		99EB0CDE23B0B03E00B0EB2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDD23B0B03E00B0EB2A /* SceneDelegate.swift */; };
 		99EB0CE023B0B03E00B0EB2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */; };
-		99EB0CE323B0B03E00B0EB2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE123B0B03E00B0EB2A /* Main.storyboard */; };
 		99EB0CE523B0B04200B0EB2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE423B0B04200B0EB2A /* Assets.xcassets */; };
 		99EB0CE823B0B04200B0EB2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE623B0B04200B0EB2A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,9 +19,7 @@
 		9999A7A323B515A300284378 /* Chords */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Chords; path = ../Chords; sourceTree = "<group>"; };
 		99EB0CD823B0B03E00B0EB2A /* ChordsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChordsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99EB0CDD23B0B03E00B0EB2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		99EB0CE223B0B03E00B0EB2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99EB0CE423B0B04200B0EB2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99EB0CE723B0B04200B0EB2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99EB0CE923B0B04200B0EB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,9 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */,
-				99EB0CDD23B0B03E00B0EB2A /* SceneDelegate.swift */,
 				99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */,
-				99EB0CE123B0B03E00B0EB2A /* Main.storyboard */,
 				99EB0CE423B0B04200B0EB2A /* Assets.xcassets */,
 				99EB0CE623B0B04200B0EB2A /* LaunchScreen.storyboard */,
 				99EB0CE923B0B04200B0EB2A /* Info.plist */,
@@ -148,7 +142,6 @@
 			files = (
 				99EB0CE823B0B04200B0EB2A /* LaunchScreen.storyboard in Resources */,
 				99EB0CE523B0B04200B0EB2A /* Assets.xcassets in Resources */,
-				99EB0CE323B0B03E00B0EB2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,21 +154,12 @@
 			files = (
 				99EB0CE023B0B03E00B0EB2A /* ViewController.swift in Sources */,
 				99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */,
-				99EB0CDE23B0B03E00B0EB2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		99EB0CE123B0B03E00B0EB2A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99EB0CE223B0B03E00B0EB2A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		99EB0CE623B0B04200B0EB2A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -308,7 +292,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SG9BHA8J2M;
 				INFOPLIST_FILE = ChordsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,7 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SG9BHA8J2M;
 				INFOPLIST_FILE = ChordsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
