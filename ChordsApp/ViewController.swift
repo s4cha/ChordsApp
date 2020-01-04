@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         view.layout(
             |-40-field-40-|,
             40,
-            |keyboard.height(340)|
+            |keyboard.height(300)|
         )
         
         field.becomeFirstResponder()
@@ -157,16 +157,24 @@ class Keyboard: UIView {
             }
             previousNote = note
         }
+        
+        
+        if let firstNote = keyboardPortion.notes.first(where: { !$0.overlay.isHidden }) {
+            let offset = firstNote.frame.origin.x - 20
+            print(offset)
+            scrollView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
+        }
     }
 }
 
 protocol Key: UIView {
+    var overlay: UIView { get }
     func show()
     func reset()
 }
 
 class WhiteKey: UIView, Key {
-    
+
     let label = UILabel()
     let overlay = UIView()
     
