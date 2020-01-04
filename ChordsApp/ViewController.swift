@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .dark
         
         let tapgr = UITapGestureRecognizer(target: self, action: #selector(tap))
         view.addGestureRecognizer(tapgr)
