@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tapgr = UITapGestureRecognizer(target: self, action: #selector(tap))
+        view.addGestureRecognizer(tapgr)
+        
         view.backgroundColor = .systemBackground
         
         view.sv (
@@ -43,6 +46,11 @@ class ViewController: UIViewController {
         }
         
         field.placeholder = "Cdim7"
+    }
+    
+    @objc
+    func tap() {
+        field.resignFirstResponder()
     }
     
     @objc func textChanged() {
