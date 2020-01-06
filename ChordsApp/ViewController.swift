@@ -53,9 +53,16 @@ class ViewController: UIViewController {
             f.font = UIFont.systemFont(ofSize: 60, weight: .bold)
             f.textAlignment = .center
             f.autocorrectionType = .no
+            if #available(iOS 13.0, *) {
+                f.placeholder = "Cdim7"
+            } else {
+                f.textColor = .white
+                f.attributedPlaceholder = NSAttributedString(string: "Cdim7", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray
+                ])
+            }
         }
         
-        field.placeholder = "Cdim7"
+        
     }
     
     @objc
@@ -87,25 +94,44 @@ class Keyboard: UIView {
     convenience init() {
         self.init(frame: .zero)
         
-        sv(
-            scrollView.sv (
+        // iPad layout
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            sv(
                 keyboardPortion,
-                keyboardPortion2
-            ),
-            keyboardFrame
-        )
-    
-        |keyboardFrame.top(0).height(10)|
+                keyboardPortion2,
+                keyboardFrame
+            )
         
-        |-20-keyboardPortion-(-1)-keyboardPortion2-20-|
-        keyboardPortion.fillVertically()
-        keyboardPortion2.fillVertically()
+            |keyboardFrame.top(0).height(10)|
+            
+            |-20-keyboardPortion-(-1)-keyboardPortion2-20-|
+            keyboardPortion.fillVertically()
+            keyboardPortion2.fillVertically()
+            
+            
+            keyboardPortion.Height == Height - 10
+            keyboardPortion2.Height == Height - 10
+        } else {
+            sv(
+                scrollView.sv (
+                    keyboardPortion,
+                    keyboardPortion2
+                ),
+                keyboardFrame
+            )
         
-        
-        keyboardPortion.Height == Height - 10
-        keyboardPortion2.Height == Height - 10
-        
-        scrollView.fillContainer()
+            |keyboardFrame.top(0).height(10)|
+            
+            |-20-keyboardPortion-(-1)-keyboardPortion2-20-|
+            keyboardPortion.fillVertically()
+            keyboardPortion2.fillVertically()
+            
+            
+            keyboardPortion.Height == Height - 10
+            keyboardPortion2.Height == Height - 10
+            
+            scrollView.fillContainer()
+        }
         
         keyboardFrame.backgroundColor = .black
     }
