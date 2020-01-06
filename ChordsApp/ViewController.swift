@@ -10,15 +10,15 @@ import UIKit
 import Chords
 import Stevia
 import AudioKit
-import AudioKitUI
 
 typealias MIDINote = UInt8
 
 class ViewController: UIViewController {
     
+    override func loadView() { view = v }
+    
     let engine = ChordsEngine()
-    let field = UITextField()
-    let keyboard = Keyboard()
+    let v = ViewControllerView()
     let sampler = AKAppleSampler()
     var MIDINotes = [MIDINote]()
 
@@ -34,58 +34,26 @@ class ViewController: UIViewController {
         }
         
         let tapgr = UITapGestureRecognizer(target: self, action: #selector(tap))
-        keyboard.addGestureRecognizer(tapgr)
+        v.keyboard.addGestureRecognizer(tapgr)
         
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = .systemBackground
-        } else {
-            view.backgroundColor = .black
-        }
-        
-        view.sv (
-            field,
-            keyboard
-        )
-        
-        field.Top == view.safeAreaLayoutGuide.Top + 20
-        view.layout(
-            |-40-field-40-|,
-            40,
-            |keyboard.height(300)|
-        )
-        
-        field.becomeFirstResponder()
-        field.addTarget(self, action: #selector(textChanged), for: .editingChanged)
-        
-        field.style { f in
-            f.font = UIFont.systemFont(ofSize: 60, weight: .bold)
-            f.textAlignment = .center
-            f.autocorrectionType = .no
-            if #available(iOS 13.0, *) {
-                f.placeholder = "Cdim7"
-            } else {
-                f.textColor = .white
-                f.attributedPlaceholder = NSAttributedString(string: "Cdim7", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray
-                ])
-            }
-        }
+        v.field.becomeFirstResponder()
+        v.field.addTarget(self, action: #selector(textChanged), for: .editingChanged)
     }
     
     @objc
     func tap() {
-        print("tap")
         play(MIDINotes: MIDINotes)
     }
     
     @objc func textChanged() {
-        updateChord(field.text!)
+        updateChord(v.field.text!)
     }
     
     func updateChord(_ string: String) {
-        keyboard.resetDisplay()
+        v.keyboard.resetDisplay()
         if let chordFound = engine.chordFor(string: string) {
             MIDINotes = MIDINotesFor(chord: chordFound)
-            keyboard.display(MIDINotes: MIDINotes)
+            v.keyboard.display(MIDINotes: MIDINotes)
         }
     }
     

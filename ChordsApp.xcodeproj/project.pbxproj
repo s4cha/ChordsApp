@@ -10,11 +10,11 @@
 		991AD40D23C3C775007D1123 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 991AD40C23C3C775007D1123 /* Stevia */; };
 		991AD40F23C3C78C007D1123 /* Chords in Frameworks */ = {isa = PBXBuildFile; productRef = 991AD40E23C3C78C007D1123 /* Chords */; };
 		991AD41123C3C8DB007D1123 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991AD41023C3C8DB007D1123 /* AudioKit.framework */; };
-		991AD41323C3C954007D1123 /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991AD41223C3C954007D1123 /* AudioKitUI.framework */; };
 		992C7BFF23C3C23200AF5B85 /* SalC5Light2.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 992C7BFE23C3C23200AF5B85 /* SalC5Light2.sf2 */; };
 		996D9B6B23C3D959007273C5 /* KeyboardPortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */; };
 		996D9B6D23C3D97E007273C5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6C23C3D97E007273C5 /* Key.swift */; };
 		996D9B6F23C3D9AA007273C5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6E23C3D9AA007273C5 /* Keyboard.swift */; };
+		996D9B7223C3E20B007273C5 /* ViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B7123C3E20B007273C5 /* ViewControllerView.swift */; };
 		99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */; };
 		99EB0CE023B0B03E00B0EB2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */; };
 		99EB0CE523B0B04200B0EB2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE423B0B04200B0EB2A /* Assets.xcassets */; };
@@ -29,6 +29,7 @@
 		996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPortion.swift; sourceTree = "<group>"; };
 		996D9B6C23C3D97E007273C5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		996D9B6E23C3D9AA007273C5 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		996D9B7123C3E20B007273C5 /* ViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerView.swift; sourceTree = "<group>"; };
 		9999A7A323B515A300284378 /* Chords */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Chords; path = ../Chords; sourceTree = "<group>"; };
 		99EB0CD823B0B03E00B0EB2A /* ChordsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChordsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 				991AD40D23C3C775007D1123 /* Stevia in Frameworks */,
 				991AD40F23C3C78C007D1123 /* Chords in Frameworks */,
 				991AD41123C3C8DB007D1123 /* AudioKit.framework in Frameworks */,
-				991AD41323C3C954007D1123 /* AudioKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +95,7 @@
 				992C7BF823C3C02400AF5B85 /* Resources */,
 				99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */,
 				99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */,
+				996D9B7123C3E20B007273C5 /* ViewControllerView.swift */,
 				996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */,
 				996D9B6E23C3D9AA007273C5 /* Keyboard.swift */,
 				996D9B6C23C3D97E007273C5 /* Key.swift */,
@@ -184,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99EB0CE023B0B03E00B0EB2A /* ViewController.swift in Sources */,
+				996D9B7223C3E20B007273C5 /* ViewControllerView.swift in Sources */,
 				996D9B6D23C3D97E007273C5 /* Key.swift in Sources */,
 				996D9B6F23C3D9AA007273C5 /* Keyboard.swift in Sources */,
 				99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */,
