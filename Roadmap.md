@@ -16,6 +16,7 @@ The big idea is to design games to be become a better musician.
 
 - Keyboard positions
     - Ex. play C -> Tap corect notes on keyboard
+    - Version with real keyboard (with microphone chord detection. ML?)
 
 - Notes
     - Ex. play C -> Answer CEG
@@ -71,3 +72,28 @@ Reverse: Cm -> Eb
 === Chord lookup:
 - Write a chord -> shows in on screen.
 - chord Search: Chord database" search an filter out.
+
+==
+Other Games
+Tell keyboard Chord name ( choose form 2)
+- work inversions
+
+UI
+-- 
+Standard iOS native
+
+-- Features
+- See total progress
+- See How Far I am in the journey.
+- Progressive learning. (start easy)
+- congratulations along the way.
+- Loose progress over time to keep gold steps (loss aversion)
+- Online profile (peer pressure)
+
+--
+Free + Ads
+-> Ads
+
+-- Settings
+- feedback/ question
+- Licenses
