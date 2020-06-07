@@ -9,6 +9,8 @@
 import UIKit
 import Stevia
 
+let kStartingCMIDINote: UInt8 = 60
+
 class Keyboard: UIView {
     
     let keyboardPortion = KeyboardPortion()
@@ -67,10 +69,10 @@ class Keyboard: UIView {
     }
     
     func display(MIDINotes: [MIDINote]) {
-        // C3 = 60, C4 = 73
+        // C2 = 48,  C3 = 60, C4 = 72
         let keyboardNotes = keyboardPortion.notes + keyboardPortion2.notes
         for n in MIDINotes {
-            let index = (Int(n) % 60)
+            let index = (Int(n) % Int(kStartingCMIDINote))
             let key = keyboardNotes[index]
             key.show()
         }

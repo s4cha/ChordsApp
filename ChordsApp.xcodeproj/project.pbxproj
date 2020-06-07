@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		991AD40D23C3C775007D1123 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 991AD40C23C3C775007D1123 /* Stevia */; };
 		991AD40F23C3C78C007D1123 /* Chords in Frameworks */ = {isa = PBXBuildFile; productRef = 991AD40E23C3C78C007D1123 /* Chords */; };
-		992C7BFF23C3C23200AF5B85 /* SalC5Light2.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 992C7BFE23C3C23200AF5B85 /* SalC5Light2.sf2 */; };
 		996A206F248D520E00536376 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A206E248D520E00536376 /* AudioKit.framework */; };
+		996A2092248D531100536376 /* Giga Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 996A2079248D531100536376 /* Giga Piano.sf2 */; };
 		996D9B6B23C3D959007273C5 /* KeyboardPortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */; };
 		996D9B6D23C3D97E007273C5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6C23C3D97E007273C5 /* Key.swift */; };
 		996D9B6F23C3D9AA007273C5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6E23C3D9AA007273C5 /* Keyboard.swift */; };
@@ -25,8 +25,8 @@
 		991AD41023C3C8DB007D1123 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = ChordsApp/AudioKit.framework; sourceTree = "<group>"; };
 		991AD41223C3C954007D1123 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKitUI.framework; path = ChordsApp/AudioKitUI.framework; sourceTree = "<group>"; };
 		992C7BF623C3BDDA00AF5B85 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/Static/AudioKit.framework; sourceTree = "<group>"; };
-		992C7BFE23C3C23200AF5B85 /* SalC5Light2.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SalC5Light2.sf2; sourceTree = "<group>"; };
 		996A206E248D520E00536376 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
+		996A2079248D531100536376 /* Giga Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Giga Piano.sf2"; sourceTree = "<group>"; };
 		996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPortion.swift; sourceTree = "<group>"; };
 		996D9B6C23C3D97E007273C5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		996D9B6E23C3D9AA007273C5 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		992C7BF823C3C02400AF5B85 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				992C7BFE23C3C23200AF5B85 /* SalC5Light2.sf2 */,
+				996A2079248D531100536376 /* Giga Piano.sf2 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992C7BFF23C3C23200AF5B85 /* SalC5Light2.sf2 in Resources */,
+				996A2092248D531100536376 /* Giga Piano.sf2 in Resources */,
 				99EB0CE823B0B04200B0EB2A /* LaunchScreen.storyboard in Resources */,
 				99EB0CE523B0B04200B0EB2A /* Assets.xcassets in Resources */,
 			);

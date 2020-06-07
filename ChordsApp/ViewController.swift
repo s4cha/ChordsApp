@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        try? sampler.loadMelodicSoundFont("SalC5Light2", preset: 0)
+        try? sampler.loadMelodicSoundFont("Giga Piano", preset: 0)
         AudioKit.output = sampler
         try? AudioKit.start()
         
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     func MIDINotesFor(chord: Chord) -> [MIDINote] {
         // Display notes in order (not a inversion)
         // aka make sure notes are laid out from left to right.
-        let kFirstCIndex: MIDINote = 60
+        let kFirstCIndex: MIDINote = kStartingCMIDINote
         var midinotes = [MIDINote]()
         var previousNote: MIDINote? = nil
         chord.notes().forEach { note in
