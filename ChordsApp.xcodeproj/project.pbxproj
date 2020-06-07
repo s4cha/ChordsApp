@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		991AD40D23C3C775007D1123 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 991AD40C23C3C775007D1123 /* Stevia */; };
 		991AD40F23C3C78C007D1123 /* Chords in Frameworks */ = {isa = PBXBuildFile; productRef = 991AD40E23C3C78C007D1123 /* Chords */; };
-		996A206F248D520E00536376 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A206E248D520E00536376 /* AudioKit.framework */; };
 		996A2092248D531100536376 /* Giga Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 996A2079248D531100536376 /* Giga Piano.sf2 */; };
 		996D9B6B23C3D959007273C5 /* KeyboardPortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */; };
 		996D9B6D23C3D97E007273C5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6C23C3D97E007273C5 /* Key.swift */; };
 		996D9B6F23C3D9AA007273C5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6E23C3D9AA007273C5 /* Keyboard.swift */; };
 		996D9B7223C3E20B007273C5 /* ViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B7123C3E20B007273C5 /* ViewControllerView.swift */; };
+		99A43BAA248D5F2F009E9E0E /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A43BA9248D5F2F009E9E0E /* AudioKit.framework */; };
 		99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */; };
 		99EB0CE023B0B03E00B0EB2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */; };
 		99EB0CE523B0B04200B0EB2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE423B0B04200B0EB2A /* Assets.xcassets */; };
@@ -22,16 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		991AD41023C3C8DB007D1123 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = ChordsApp/AudioKit.framework; sourceTree = "<group>"; };
-		991AD41223C3C954007D1123 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKitUI.framework; path = ChordsApp/AudioKitUI.framework; sourceTree = "<group>"; };
-		992C7BF623C3BDDA00AF5B85 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/Static/AudioKit.framework; sourceTree = "<group>"; };
-		996A206E248D520E00536376 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		996A2079248D531100536376 /* Giga Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Giga Piano.sf2"; sourceTree = "<group>"; };
 		996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPortion.swift; sourceTree = "<group>"; };
 		996D9B6C23C3D97E007273C5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		996D9B6E23C3D9AA007273C5 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		996D9B7123C3E20B007273C5 /* ViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerView.swift; sourceTree = "<group>"; };
 		9999A7A323B515A300284378 /* Chords */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Chords; path = ../Chords; sourceTree = "<group>"; };
+		99A43BA9248D5F2F009E9E0E /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		99EB0CD823B0B03E00B0EB2A /* Piano Chords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piano Chords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,9 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A43BAA248D5F2F009E9E0E /* AudioKit.framework in Frameworks */,
 				991AD40D23C3C775007D1123 /* Stevia in Frameworks */,
 				991AD40F23C3C78C007D1123 /* Chords in Frameworks */,
-				996A206F248D520E00536376 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,10 +62,6 @@
 		9999A7A423B515E200284378 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				996A206E248D520E00536376 /* AudioKit.framework */,
-				991AD41223C3C954007D1123 /* AudioKitUI.framework */,
-				991AD41023C3C8DB007D1123 /* AudioKit.framework */,
-				992C7BF623C3BDDA00AF5B85 /* AudioKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,6 +94,7 @@
 				996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */,
 				996D9B6E23C3D9AA007273C5 /* Keyboard.swift */,
 				996D9B6C23C3D97E007273C5 /* Key.swift */,
+				99A43BA9248D5F2F009E9E0E /* AudioKit.framework */,
 				99EB0CE423B0B04200B0EB2A /* Assets.xcassets */,
 				99EB0CE623B0B04200B0EB2A /* LaunchScreen.storyboard */,
 				99EB0CE923B0B04200B0EB2A /* Info.plist */,
@@ -118,7 +112,6 @@
 				99EB0CD423B0B03D00B0EB2A /* Sources */,
 				99EB0CD523B0B03D00B0EB2A /* Frameworks */,
 				99EB0CD623B0B03D00B0EB2A /* Resources */,
-				996A2071248D521800536376 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -181,27 +174,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		996A2071248D521800536376 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/AudioKit.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		99EB0CD423B0B03D00B0EB2A /* Sources */ = {
@@ -350,11 +322,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = J9YALKHJ5R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ChordsApp",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ChordsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -380,11 +352,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = J9YALKHJ5R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ChordsApp",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ChordsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
