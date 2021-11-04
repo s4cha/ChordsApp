@@ -19,15 +19,17 @@ class ViewController: UIViewController {
     
     let engine = ChordsEngine()
     let v = ViewControllerView()
-    let sampler = AKAppleSampler()
+    let sampler = AppleSampler()
     var MIDINotes = [MIDINote]()
-
+    let audioEngine = AudioEngine()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         try? sampler.loadMelodicSoundFont("Giga Piano", preset: 0)
-        AudioKit.output = sampler
-        try? AudioKit.start()
+        
+        audioEngine.output = sampler
+        try? audioEngine.start()
         
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .dark
@@ -79,7 +81,7 @@ class ViewController: UIViewController {
     
     func play(MIDINotes: [MIDINote]) {
         MIDINotes.forEach { n in
-            try? sampler.play(noteNumber: n, velocity: 80, channel: 0)
+            sampler.play(noteNumber: n, velocity: 80, channel: 0)
         }
     }
 }
