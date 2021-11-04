@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Chords",
+        "repositoryURL": "https://github.com/s4cha/Chords",
+        "state": {
+          "branch": null,
+          "revision": "2908b76b6c47a9764c15e895cd99cac457b1fcb9",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "Stevia",
         "repositoryURL": "https://github.com/freshOS/Stevia",
         "state": {
