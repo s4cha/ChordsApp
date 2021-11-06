@@ -9,24 +9,8 @@
 import UIKit
 import Stevia
 
-class KeyboardPortion: UIView {
-    
-    // Whites
-    let C = WhiteKey(name: "C")
-    let D = WhiteKey(name: "D")
-    let E = WhiteKey(name: "E")
-    let F = WhiteKey(name: "F")
-    let G = WhiteKey(name: "G")
-    let A = WhiteKey(name: "A")
-    let B = WhiteKey(name: "B")
-    
-    // Blacks
-    let Csharp = BlackKey(name: "C#")
-    let Dsharp = BlackKey(name: "D#")
-    let Fsharp = BlackKey(name: "F#")
-    let Gsharp = BlackKey(name: "G#")
-    let Asharp = BlackKey(name: "A#")
-    
+class KeyboardPortion2: UIView {
+
     var notes: [Key] = [Key]()
     var whites: [Key] = [Key]()
     var blacks: [Key] = [Key]()
@@ -82,5 +66,70 @@ class KeyboardPortion: UIView {
         Fsharp.CenterX == F.Right
         Gsharp.CenterX == G.Right
         Asharp.CenterX == A.Right
+    }
+}
+
+
+import SwiftUI
+//
+//class KeyboardPortionViewModel: ObservableObject {
+//
+//}
+
+struct KeyboardPortion: View {
+
+//    @StateObject var viewModel = KeyboardPortionViewModel()
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: true) {
+            let height: CGFloat = 250
+            let width: CGFloat = 50
+
+            let blackHeight = height * 0.66
+            let blackWidth = width * 0.6
+            ZStack(alignment: Alignment.topLeading) {
+                HStack(spacing: 1) {
+                    WhiteKey(name: "C", isHighlighted: true)
+                        .frame(width: width, height: height)
+                    WhiteKey(name: "D", isHighlighted: false)
+                        .frame(width: width, height: height)
+                    WhiteKey(name: "E", isHighlighted: true)
+                        .frame(width: width, height: height)
+                    WhiteKey(name: "F", isHighlighted: false)
+                        .frame(width: width, height: height)
+                    WhiteKey(name: "G", isHighlighted: true)
+                        .frame(width: width, height: height)
+                    WhiteKey(name: "A", isHighlighted: false)
+                        .frame(width: width, height: height)
+                    WhiteKey(name: "B", isHighlighted: false)
+                        .frame(width: width, height: height)
+                }
+                HStack {
+                    Spacer().frame(width: 40)
+                    BlackKey(name: "C#", isHighlighted: false)
+                        .frame(width: blackWidth, height: blackHeight)
+                    Spacer().frame(width:30)
+                    BlackKey(name: "D#", isHighlighted: false)
+                        .frame(width: blackWidth, height: blackHeight)
+                    Spacer().frame(width:85)
+                    BlackKey(name: "F#", isHighlighted: false)
+                        .frame(width: blackWidth, height: blackHeight)
+                    Spacer().frame(width:30)
+                    BlackKey(name: "G#", isHighlighted: false)
+                        .frame(width: blackWidth, height: blackHeight)
+                    Spacer().frame(width:30)
+                    BlackKey(name: "A#", isHighlighted: false)
+                        .frame(width: blackWidth, height: blackHeight)
+                }
+            }
+        }
+        .background(Color.black)
+        .frame(height: 400)
+    }
+}
+
+struct KeyboardPortionUI_Preview: PreviewProvider {
+    static var previews: some View {
+        KeyboardPortion()
     }
 }
