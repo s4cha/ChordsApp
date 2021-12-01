@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct App: View {
+struct ChordsApp: View {
     
     @StateObject var viewModel = AppViewModel()
     

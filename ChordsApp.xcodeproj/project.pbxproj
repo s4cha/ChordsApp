@@ -13,10 +13,10 @@
 		996A2092248D531100536376 /* Giga Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 996A2079248D531100536376 /* Giga Piano.sf2 */; };
 		996D9B6B23C3D959007273C5 /* KeyboardPortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */; };
 		996D9B6F23C3D9AA007273C5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6E23C3D9AA007273C5 /* Keyboard.swift */; };
-		99B67A052737C87C00B27417 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B67A042737C87C00B27417 /* App.swift */; };
+		99B67A052737C87C00B27417 /* ChordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B67A042737C87C00B27417 /* ChordsApp.swift */; };
 		99B67A072737C8A700B27417 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B67A062737C8A700B27417 /* AppViewModel.swift */; };
 		99D2D5BD27344F6F009DAC05 /* Chords in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2D5BC27344F6F009DAC05 /* Chords */; };
-		99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */; };
+		99EB0CDC23B0B03E00B0EB2A /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDB23B0B03E00B0EB2A /* MainApp.swift */; };
 		99EB0CE523B0B04200B0EB2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE423B0B04200B0EB2A /* Assets.xcassets */; };
 		99EB0CE823B0B04200B0EB2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE623B0B04200B0EB2A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -27,10 +27,10 @@
 		996A2079248D531100536376 /* Giga Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Giga Piano.sf2"; sourceTree = "<group>"; };
 		996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPortion.swift; sourceTree = "<group>"; };
 		996D9B6E23C3D9AA007273C5 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
-		99B67A042737C87C00B27417 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		99B67A042737C87C00B27417 /* ChordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsApp.swift; sourceTree = "<group>"; };
 		99B67A062737C8A700B27417 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		99EB0CD823B0B03E00B0EB2A /* Piano Chords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piano Chords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99EB0CDB23B0B03E00B0EB2A /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		99EB0CE423B0B04200B0EB2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99EB0CE723B0B04200B0EB2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99EB0CE923B0B04200B0EB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				992C7BF823C3C02400AF5B85 /* Resources */,
-				99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */,
-				99B67A042737C87C00B27417 /* App.swift */,
+				99EB0CDB23B0B03E00B0EB2A /* MainApp.swift */,
+				99B67A042737C87C00B27417 /* ChordsApp.swift */,
 				99B67A062737C8A700B27417 /* AppViewModel.swift */,
 				996D9B6E23C3D9AA007273C5 /* Keyboard.swift */,
 				996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */,
@@ -182,8 +182,8 @@
 				99B67A072737C8A700B27417 /* AppViewModel.swift in Sources */,
 				9926CAFB27358ACC009E1541 /* BlackKey.swift in Sources */,
 				996D9B6F23C3D9AA007273C5 /* Keyboard.swift in Sources */,
-				99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */,
-				99B67A052737C87C00B27417 /* App.swift in Sources */,
+				99EB0CDC23B0B03E00B0EB2A /* MainApp.swift in Sources */,
+				99B67A052737C87C00B27417 /* ChordsApp.swift in Sources */,
 				996D9B6B23C3D959007273C5 /* KeyboardPortion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
