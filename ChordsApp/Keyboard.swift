@@ -6,82 +6,41 @@
 //  Copyright © 2020 sachadso. All rights reserved.
 //
 
-import UIKit
-import Stevia
+import SwiftUI
 
-let kStartingCMIDINote: UInt8 = 60
+//v.field.becomeFirstResponder()
+//v.field.addTarget(self, action: #selector(textChanged), for: .editingChanged)
 
-class Keyboard: UIView {
+
+struct KeyBoard: View {
     
-    let keyboardPortion = KeyboardPortion()
-    let keyboardPortion2 = KeyboardPortion()
-    let keyboardFrame = UIView()
-    let scrollView = UIScrollView()
+    let selectedNotes: [MIDINote]
     
-    convenience init() {
-        self.init(frame: .zero)
-        
-        // iPad layout
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            sv(
-                keyboardPortion,
-                keyboardPortion2,
-                keyboardFrame
-            )
-        
-            |keyboardFrame.top(0).height(10)|
-            
-            |-20-keyboardPortion-(-1)-keyboardPortion2-20-|
-            keyboardPortion.fillVertically()
-            keyboardPortion2.fillVertically()
-            
-            
-            keyboardPortion.Height == Height - 10
-            keyboardPortion2.Height == Height - 10
-        } else {
-            sv(
-                scrollView.sv (
-                    keyboardPortion,
-                    keyboardPortion2
-                ),
-                keyboardFrame
-            )
-        
-            |keyboardFrame.top(0).height(10)|
-            
-            |-20-keyboardPortion-(-1)-keyboardPortion2-20-|
-            keyboardPortion.fillVertically()
-            keyboardPortion2.fillVertically()
-            
-            
-            keyboardPortion.Height == Height - 10
-            keyboardPortion2.Height == Height - 10
-            
-            scrollView.fillContainer()
-        }
-        
-        keyboardFrame.backgroundColor = .black
-    }
-    
-    func resetDisplay() {
-        keyboardPortion.notes.forEach { $0.reset() }
-        keyboardPortion2.notes.forEach { $0.reset() }
-    }
-    
-    func display(MIDINotes: [MIDINote]) {
-        // C2 = 48,  C3 = 60, C4 = 72
-        let keyboardNotes = keyboardPortion.notes + keyboardPortion2.notes
-        for n in MIDINotes {
-            let index = (Int(n) % Int(kStartingCMIDINote))
-            let key = keyboardNotes[index]
-            key.show()
-        }
-        
-        if let firstNote = keyboardPortion.notes.first(where: { !$0.overlay.isHidden }) {
-            let offset = firstNote.frame.origin.x - 20
-            scrollView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: true) {
+            HStack(spacing: 1) {
+                KeyboardPortion(cNote: 60, selectedNotes: selectedNotes)
+                KeyboardPortion(cNote: 72, selectedNotes: selectedNotes)
+            }
         }
     }
 }
 
+// TODO scroll to selected notes
+//if let firstNote = keyboardPortion.notes.first(where: { !$0.overlay.isHidden }) {
+//    let offset = firstNote.frame.origin.x - 20
+//    scrollView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
+//}
+
+//    func display(MIDINotes: [MIDINote]) {
+//        // C2 = 48,  C3 = 60, C4 = 72
+//        let keyboardNotes = keyboardPortion.notes + keyboardPortion2.notes
+//        for n in MIDINotes {
+//            let index = (Int(n) % Int(kStartingCMIDINote))
+//            let key = keyboardNotes[index]
+//            key.show()
+//        }
+//
+//
+//    }
 

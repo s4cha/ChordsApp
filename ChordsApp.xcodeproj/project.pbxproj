@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		991AD40D23C3C775007D1123 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 991AD40C23C3C775007D1123 /* Stevia */; };
 		9926CAFB27358ACC009E1541 /* BlackKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9926CAFA27358ACC009E1541 /* BlackKey.swift */; };
 		99407A39273444FC00763D40 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 99407A38273444FC00763D40 /* AudioKit */; };
 		99407A3B27344E6200763D40 /* WhiteKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99407A3A27344E6200763D40 /* WhiteKey.swift */; };
 		996A2092248D531100536376 /* Giga Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 996A2079248D531100536376 /* Giga Piano.sf2 */; };
 		996D9B6B23C3D959007273C5 /* KeyboardPortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */; };
 		996D9B6F23C3D9AA007273C5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B6E23C3D9AA007273C5 /* Keyboard.swift */; };
-		996D9B7223C3E20B007273C5 /* ViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D9B7123C3E20B007273C5 /* ViewControllerView.swift */; };
+		99B67A052737C87C00B27417 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B67A042737C87C00B27417 /* App.swift */; };
+		99B67A072737C8A700B27417 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B67A062737C8A700B27417 /* AppViewModel.swift */; };
 		99D2D5BD27344F6F009DAC05 /* Chords in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2D5BC27344F6F009DAC05 /* Chords */; };
 		99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */; };
-		99EB0CE023B0B03E00B0EB2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */; };
 		99EB0CE523B0B04200B0EB2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE423B0B04200B0EB2A /* Assets.xcassets */; };
 		99EB0CE823B0B04200B0EB2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EB0CE623B0B04200B0EB2A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -28,10 +27,10 @@
 		996A2079248D531100536376 /* Giga Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Giga Piano.sf2"; sourceTree = "<group>"; };
 		996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPortion.swift; sourceTree = "<group>"; };
 		996D9B6E23C3D9AA007273C5 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
-		996D9B7123C3E20B007273C5 /* ViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerView.swift; sourceTree = "<group>"; };
+		99B67A042737C87C00B27417 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		99B67A062737C8A700B27417 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		99EB0CD823B0B03E00B0EB2A /* Piano Chords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piano Chords.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99EB0CE423B0B04200B0EB2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99EB0CE723B0B04200B0EB2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99EB0CE923B0B04200B0EB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,7 +42,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				99407A39273444FC00763D40 /* AudioKit in Frameworks */,
-				991AD40D23C3C775007D1123 /* Stevia in Frameworks */,
 				99D2D5BD27344F6F009DAC05 /* Chords in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,10 +86,10 @@
 			children = (
 				992C7BF823C3C02400AF5B85 /* Resources */,
 				99EB0CDB23B0B03E00B0EB2A /* AppDelegate.swift */,
-				99EB0CDF23B0B03E00B0EB2A /* ViewController.swift */,
-				996D9B7123C3E20B007273C5 /* ViewControllerView.swift */,
-				996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */,
+				99B67A042737C87C00B27417 /* App.swift */,
+				99B67A062737C8A700B27417 /* AppViewModel.swift */,
 				996D9B6E23C3D9AA007273C5 /* Keyboard.swift */,
+				996D9B6A23C3D959007273C5 /* KeyboardPortion.swift */,
 				99407A3A27344E6200763D40 /* WhiteKey.swift */,
 				9926CAFA27358ACC009E1541 /* BlackKey.swift */,
 				99EB0CE423B0B04200B0EB2A /* Assets.xcassets */,
@@ -118,7 +116,6 @@
 			);
 			name = ChordsApp;
 			packageProductDependencies = (
-				991AD40C23C3C775007D1123 /* Stevia */,
 				99407A38273444FC00763D40 /* AudioKit */,
 				99D2D5BC27344F6F009DAC05 /* Chords */,
 			);
@@ -151,7 +148,6 @@
 			);
 			mainGroup = 99EB0CCF23B0B03D00B0EB2A;
 			packageReferences = (
-				991AD40B23C3C775007D1123 /* XCRemoteSwiftPackageReference "Stevia" */,
 				99407A37273444FC00763D40 /* XCRemoteSwiftPackageReference "AudioKit" */,
 				99D2D5BB27344F6F009DAC05 /* XCRemoteSwiftPackageReference "Chords" */,
 			);
@@ -182,12 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99EB0CE023B0B03E00B0EB2A /* ViewController.swift in Sources */,
-				996D9B7223C3E20B007273C5 /* ViewControllerView.swift in Sources */,
 				99407A3B27344E6200763D40 /* WhiteKey.swift in Sources */,
+				99B67A072737C8A700B27417 /* AppViewModel.swift in Sources */,
 				9926CAFB27358ACC009E1541 /* BlackKey.swift in Sources */,
 				996D9B6F23C3D9AA007273C5 /* Keyboard.swift in Sources */,
 				99EB0CDC23B0B03E00B0EB2A /* AppDelegate.swift in Sources */,
+				99B67A052737C87C00B27417 /* App.swift in Sources */,
 				996D9B6B23C3D959007273C5 /* KeyboardPortion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,14 +392,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		991AD40B23C3C775007D1123 /* XCRemoteSwiftPackageReference "Stevia" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/freshOS/Stevia";
-			requirement = {
-				kind = exactVersion;
-				version = 4.8.0;
-			};
-		};
 		99407A37273444FC00763D40 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AudioKit/AudioKit";
@@ -423,11 +411,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		991AD40C23C3C775007D1123 /* Stevia */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 991AD40B23C3C775007D1123 /* XCRemoteSwiftPackageReference "Stevia" */;
-			productName = Stevia;
-		};
 		99407A38273444FC00763D40 /* AudioKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 99407A37273444FC00763D40 /* XCRemoteSwiftPackageReference "AudioKit" */;
