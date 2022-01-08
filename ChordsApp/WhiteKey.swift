@@ -13,6 +13,7 @@ struct WhiteKey: View {
     let name: String
     let isHighlighted: Bool
     let height: CGFloat = 300
+    let interval: String?
 
     var body: some View {
         ZStack {
@@ -21,9 +22,13 @@ struct WhiteKey: View {
                 .cornerRadius(10)
             VStack {
                 Spacer()
+                if let interval = interval {
+                    Text(interval)
+                        .padding(5)
+                        .background(Circle().foregroundColor(.red))
+                }
                 Text(name)
                     .foregroundColor(isHighlighted ? .white : .black)
-                    .padding()
                     .padding(.bottom, 20)
             }
         }
@@ -33,8 +38,8 @@ struct WhiteKey: View {
 struct SwiftUIViewTest_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
-            WhiteKey(name: "C", isHighlighted: false)
-            WhiteKey(name: "A", isHighlighted: true)
+            WhiteKey(name: "C", isHighlighted: false, interval: nil)
+            WhiteKey(name: "A", isHighlighted: true, interval: nil)
         }.background(Color.black)
     }
 }

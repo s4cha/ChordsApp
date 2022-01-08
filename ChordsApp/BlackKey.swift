@@ -13,6 +13,7 @@ struct BlackKey: View {
     let name: String
     let isHighlighted: Bool
     let height: CGFloat = 300
+    let interval: String?
 
     var body: some View {
         ZStack {
@@ -21,6 +22,12 @@ struct BlackKey: View {
                 .cornerRadius(10)
             VStack {
                 Spacer()
+                if let interval = interval {
+                    Text(interval)
+                        .minimumScaleFactor(0.1)
+                        .padding(5)
+                        .background(Circle().foregroundColor(.red))
+                }
                 Text(name)
                     .font(.system(size: 12))
                     .foregroundColor(.white)
@@ -33,8 +40,8 @@ struct BlackKey: View {
 struct BlackKey_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
-            BlackKey(name: "G", isHighlighted: false)
-            BlackKey(name: "D", isHighlighted: true)
+            BlackKey(name: "G", isHighlighted: false, interval: nil)
+            BlackKey(name: "D", isHighlighted: true, interval: nil)
         }
     }
 }

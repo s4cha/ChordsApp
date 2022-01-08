@@ -16,6 +16,7 @@ struct ChordsApp: View {
     var body: some View {
         VStack {
             Spacer()
+            HStack {
             TextField("Cdim7", text: $viewModel.text)
                 .foregroundColor(.white)
                 .font(.system(size: 60, weight: .bold))
@@ -24,11 +25,21 @@ struct ChordsApp: View {
                 .padding(.top, 20)
                 .padding(.horizontal, 40)
                 .padding(.bottom, 40)
+                if viewModel.chord != nil {
+                    Button(action: viewModel.invert) {
+                        Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                }
+            }
             Spacer()
-            KeyBoard(selectedNotes: viewModel.MIDINotes)
+            KeyBoard(chord: viewModel.visualChord)
                 .frame(height: 300)
                 .onTapGesture {
-                    viewModel.play(MIDINotes: viewModel.MIDINotes)
+                    viewModel.play()
                 }
             Spacer()
         }.background(Color.black.ignoresSafeArea())

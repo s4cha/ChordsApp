@@ -14,13 +14,13 @@ import SwiftUI
 
 struct KeyBoard: View {
     
-    let selectedNotes: [MIDINote]
+    let chord: VisualChord?
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack(spacing: 1) {
-                KeyboardPortion(cNote: 60, selectedNotes: selectedNotes)
-                KeyboardPortion(cNote: 72, selectedNotes: selectedNotes)
+                KeyboardPortion(cNote: 60, chord: chord)
+                KeyboardPortion(cNote: 72, chord: chord)
             }
         }
     }
