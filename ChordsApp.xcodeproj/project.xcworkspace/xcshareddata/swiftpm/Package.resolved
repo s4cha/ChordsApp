@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "AudioKit",
-        "repositoryURL": "https://github.com/AudioKit/AudioKit",
-        "state": {
-          "branch": null,
-          "revision": "fca2966f95440760c6264aa6368dfb5bf829b2dd",
-          "version": "5.2.2"
-        }
-      },
-      {
-        "package": "Chords",
-        "repositoryURL": "https://github.com/s4cha/Chords",
-        "state": {
-          "branch": null,
-          "revision": "5059eaab4a5b14a72f84c4c3b8b41346731baddc",
-          "version": "0.0.3"
-        }
+  "pins" : [
+    {
+      "identity" : "audiokit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/AudioKit",
+      "state" : {
+        "revision" : "fca2966f95440760c6264aa6368dfb5bf829b2dd",
+        "version" : "5.2.2"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "chords",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/s4cha/Chords",
+      "state" : {
+        "revision" : "46743d15516d0075c86bd91d2c4135c7913aedef",
+        "version" : "0.0.4"
+      }
+    }
+  ],
+  "version" : 2
 }
