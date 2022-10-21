@@ -32,15 +32,16 @@ struct VisualChord {
     static func MIDINotesFor(chord: Chord) -> [MIDINote] {
         // Display notes in order (not a inversion)
         // aka make sure notes are laid out from left to right.
-        let kFirstCIndex: MIDINote = kStartingCMIDINote
+        var referenceCIndex: MIDINote = kStartingCMIDINote
         var midinotes = [MIDINote]()
         var previousNote: MIDINote? = nil
         chord.notes().forEach { note in
             let kbNoteType = keyboardNoteType(fromNote: note)
             if let index = KeyboardNoteType.allCases.firstIndex(of: kbNoteType) {
-                var midiNote = kFirstCIndex + UInt8(index)
+                var midiNote = referenceCIndex + UInt8(index)
                 if let previousNote = previousNote, midiNote < previousNote {
                     midiNote += 12
+                    referenceCIndex += 12
                 }
                 midinotes.append(midiNote)
                 previousNote = midiNote

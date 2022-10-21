@@ -21,6 +21,7 @@ struct KeyBoard: View {
             HStack(spacing: 1) {
                 KeyboardPortion(cNote: 60, chord: chord)
                 KeyboardPortion(cNote: 72, chord: chord)
+                KeyboardPortion(cNote: 84, chord: chord)
             }
         }
     }
